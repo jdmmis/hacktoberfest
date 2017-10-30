@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Local variables
 default_src=/Users/x/Downloads/files/
@@ -34,9 +35,16 @@ src_dest()
 	/Users/x/Downloads/Software/rsync-3.1.1/rsync -a --info=progress2 "$1/" "$2/"
 }
 
+usage()
+{
+	echo "./backup              (backup default source to default destination)"
+	echo "./backup -s path      (backup specific source to default destination)"
+	echo "./backup -d path      (backup default source to specific destination)"
+	echo "./backup    path path (backup specific source to specific destination)"
+	press
+	clear
+}
 
-
-# ------------------------------ Main -----------------------------------------
 clear
 if [ "$#" -eq 0 ]
 then
@@ -51,10 +59,10 @@ then
 		dest "$@" 
 	elif [[ "$1" == "-"* ]]
 	then
-		:
+		usage
 	else
 		src_dest "$@" "$@"
 	fi
 else
-	:
+	usage
 fi
