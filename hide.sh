@@ -1,4 +1,6 @@
-R="/Users/x/Downloads/Pictures/untitled"
+#! /bin/bash
+
+DIR="/Users/x/Downloads/Pictures/untitled"
 DIR2="/Users/x/Downloads/Pictures/.untitled"
 password="U2FsdGVkX18vy4f4QRB3qnb5vIWR0x+tlZmdAmPxX8Y="
 input=""
@@ -13,7 +15,8 @@ action()
 	if [ "$result" = "$input" ]
 	then
 		clear
-		mv "$DIR2" "$DIR"
+		#mv "$DIR2" "$DIR"
+		open "$DIR2"
 	fi
 }
 
