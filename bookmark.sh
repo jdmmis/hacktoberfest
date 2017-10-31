@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Prompt for key return until then wait
 press()
 {
@@ -13,5 +15,6 @@ perl -0ne 'print "$2\n$1\n" while (/a href=\"(.*?)\">(.*?)<\/a>/igs)' "/Users/x/
 
 press
 
-
+rm /Users/x/Documents/Keep/Misc/Safari/temp
+rm /Users/x/Documents/Keep/Misc/Safari/sf.html
 
